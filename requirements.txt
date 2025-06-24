@@ -1,0 +1,9 @@
+notebook==7.1.2
+autogen-agentchat>=0.4
+autogen-ext[openai]>=0.4
+chess==1.10.0
+matplotlib
+numpy
+pandas
+yfinance
+
