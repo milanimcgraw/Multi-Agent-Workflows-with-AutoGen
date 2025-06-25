@@ -115,12 +115,19 @@ Dependencies are listed in `requirements.txt`. Key packages:
 * `tqdm`: for progress tracking  
 * `notebook`: Jupyter Notebook interface
   
-**Install with:**
+#### **Installation**
 
 ```bash
 pip install -r requirements.txt
 ```
+or 
 
+```bash
+pip install notebook==7.1.2 autogen autogen-agentchat>=0.4 autogen-ext[openai]>=0.4 chess==1.10.0 matplotlib numpy pandas yfinance
+``` 
+
+
+#### 
 ---
 > ## 📌 Credits
 > 📦  This project uses[Elasticsearch](https://github.com/elastic/elasticsearch/tree/main), developed and maintained by [Elastic](https://github.com/elastic). Knowledge base and code adapted from the [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp/tree/main) by DataTalks.Club. 
