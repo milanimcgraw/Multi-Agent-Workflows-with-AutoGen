@@ -1,4 +1,4 @@
-# Multi-Agent Workflows with AutoGen
+# Multi-Agent Workflows with Microsoft's AutoGen
 ## ⚙️ Project Overview
 
 This repository showcases a collection of multi-agent system demos built using the [AutoGen](https://github.com/microsoft/autogen) framework and [OpenAI's GPT-4o](https://openai.com/index/gpt-4o). Each notebook demonstrates a distinct **agentic design pattern** tailored to real-world use cases such as financial analysis, code generation, customer onboarding, creative writing, collaborative dialogue, and tool-augmented reasoning.
