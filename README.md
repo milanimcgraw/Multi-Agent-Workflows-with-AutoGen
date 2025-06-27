@@ -1,14 +1,6 @@
 # Multi-Agent-Workflows-with-AutoGen
 Agentic design pattern demos using AutoGen, featuring multi-agent systems for financial analysis, code generation, customer onboarding, blog writing, dialogue, and tool-assisted chess.
 
-
-"""# 🤖 [AI Agentic Design Patterns with AutoGen](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/)
-
-💡 Welcome to the "AI Agentic Design Patterns with AutoGen" course! The course will equip you with the knowledge and skills to build and customize multi-agent systems using AutoGen.
-
-## Course Summary
-In this course, you'll explore key principles of designing multi-agent systems and enabling agents to collaborate on complex tasks using the AutoGen framework. Here's what you can expect to learn and experience:
-
 1. 🎭 **Conversational Agents**: Create a two-agent chat showing a conversation between two standup comedians using “ConversableAgent,” a built-in agent class of AutoGen.
 
 2. 🎉 **Customer Onboarding**: Develop a sequence of chats between agents to provide a fun customer onboarding experience for a product using the multi-agent collaboration design pattern.
@@ -26,18 +18,17 @@ By the end of the course, you’ll have hands-on experience with AutoGen’s cor
 ## Key Points
 - 🛠️ Use the AutoGen framework to build multi-agent systems with diverse roles and capabilities for implementing complex AI applications.
 - 📚 Implement agentic design patterns such as Reflection, Tool Use, Planning, and Multi-agent Collaboration using AutoGen.
+---
 - 🌟 Learn directly from the creators of AutoGen, Chi Wang and Qingyun Wu.
-
 ## About the Instructors
 🌟 **Chi Wang** is a Principal Researcher at Microsoft Research, bringing extensive expertise in AI and multi-agent systems to guide you through this course.
 
 🌟 **Qingyun Wu** is an Assistant Professor at Penn State University, specializing in AI and multi-agent collaboration, to help you master agentic design patterns.
 
-🔗 To enroll in the course or for further information, visit [deeplearning.ai](https://www.deeplearning.ai/short-courses/)."""
+🔗 To enroll in the course or for further information, visit [deeplearning.ai](https://www.deeplearning.ai/short-courses/), [AI Agentic Design Patterns with AutoGen](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/)
 
-This is README.md from a short course I took. I am recreating this repo from my completed notebooks from the course, tweaking the README.md. and some of the code to tailor to my style of repo. Instead of "AI Agentic Design Patterns with AutoGen" what can I change the title to (use context from each of the agent systems listed). 
-
-The codebooks are: Multi-Agent Conversation and Stand-up Comedy, Sequential Chats and Customer Onboarding, Reflection and Blogpost Writing, Tool Use and Conversational Chess, Coding and Financial Analysis 
+💡 Welcome to the "AI Agentic Design Patterns with AutoGen" course! The course will equip you with the knowledge and skills to build and customize multi-agent systems using AutoGen.
+In this course, you'll explore key principles of designing multi-agent systems and enabling agents to collaborate on complex tasks using the AutoGen framework. Here's what you can expect to learn and experience:
 
 ---
 
