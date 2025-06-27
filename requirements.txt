@@ -8,3 +8,4 @@ numpy
 pandas
 yfinance
 openai
+ipywidgets

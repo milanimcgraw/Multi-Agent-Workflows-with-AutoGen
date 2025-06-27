@@ -1,0 +1,17 @@
+# Get the current date
+from datetime import datetime
+
+# Import the necessary functions
+from functions import get_stock_prices, plot_stock_prices
+
+# Define stock symbols and get YTD date range
+stock_symbols = ['NVDA', 'TSLA']
+current_date = "2025-06-27"  # Given today date
+start_date = f"{current_date[:4]}-01-01"  # Start of current year
+end_date = current_date  # Current date
+
+# Get the stock prices for the YTD range
+stock_prices = get_stock_prices(stock_symbols, start_date, end_date)
+
+# Plot the stock prices and save to a file
+plot_stock_prices(stock_prices, "stock_prices_YTD_plot.png")
