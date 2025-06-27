@@ -1,112 +1,122 @@
-# Multi-Agent-Workflows-with-AutoGen
-Agentic design pattern demos using AutoGen, featuring multi-agent systems for financial analysis, code generation, customer onboarding, blog writing, dialogue, and tool-assisted chess.
+# Multi-Agent Workflows with AutoGen
+## ⚙️ Project Overview
 
-1. 🎭 **Conversational Agents**: Create a two-agent chat showing a conversation between two standup comedians using “ConversableAgent,” a built-in agent class of AutoGen.
+This repository showcases a collection of multi-agent system demos built using the [AutoGen](https://github.com/microsoft/autogen) framework and [OpenAI's GPT-4o](https://openai.com/index/gpt-4o). Each notebook demonstrates a distinct **agentic design pattern** tailored to real-world use cases such as financial analysis, code generation, customer onboarding, creative writing, collaborative dialogue, and tool-augmented reasoning.
 
-2. 🎉 **Customer Onboarding**: Develop a sequence of chats between agents to provide a fun customer onboarding experience for a product using the multi-agent collaboration design pattern.
+## ⚙️ AutoGen
 
-3. 📝 **Blog Post Creation**: Use the agent reflection framework to create a high-quality blog post with nested chats, where reviewer agents reflect on the blog post written by another agent.
+[AutoGen](https://github.com/microsoft/autogen) is Microsoft’s open-source framework for building multi-agent AI systems that can act autonomously or collaborate with humans. Designed with layered abstraction, AutoGen enables structured conversations, tool usage, and cross-agent coordination with ease.
 
-4. ♟️ **Chess Game**: Implement a conversational chess game where two agent players can call a tool and make legal moves on the chessboard using the tool use design pattern.
+Leverage its flexible Core API for event-driven message passing, or rapidly prototype using the higher-level AgentChat API. Extend functionality with integrations for code execution, OpenAI models, and other LLM providers.
 
-5. 💻 **Coding Agent**: Develop a coding agent capable of generating the necessary code to plot stock gains for financial analysis and integrating user-defined functions into the code.
+> For examples, tools, and community-driven innovation, explore the [AutoGen GitHub repo](https://github.com/microsoft/autogen), [AutoGen Bench](https://github.com/microsoft/autogen#autogen-bench), or contribute via [GitHub Discussions](https://github.com/microsoft/autogen/discussions).
 
-6. 📊 **Financial Analysis**: Create systems where agents collaborate and seek human feedback to complete a financial analysis task, generating code from scratch or using user-provided code.
-   
-By the end of the course, you’ll have hands-on experience with AutoGen’s core components and a solid understanding of agentic design patterns, ready to implement multi-agent systems in your workflows.
+## ⚙️ Agent Workflows
 
-## Key Points
-- 🛠️ Use the AutoGen framework to build multi-agent systems with diverse roles and capabilities for implementing complex AI applications.
-- 📚 Implement agentic design patterns such as Reflection, Tool Use, Planning, and Multi-agent Collaboration using AutoGen.
----
-- 🌟 Learn directly from the creators of AutoGen, Chi Wang and Qingyun Wu.
-## About the Instructors
-🌟 **Chi Wang** is a Principal Researcher at Microsoft Research, bringing extensive expertise in AI and multi-agent systems to guide you through this course.
+### 🤖 Startup Pitch Simulation
+A two-agent chat that simulates a conversation between a startup founder and an investor, using `ConversableAgent`. This showcases AutoGen’s ability to construct realistic business dialogues through structured multi-agent conversations.
 
-🌟 **Qingyun Wu** is an Assistant Professor at Penn State University, specializing in AI and multi-agent collaboration, to help you master agentic design patterns.
+### 💻 Coding & Financial Analysis: Stock Plotting 
+An autonomous agent that generates Python code to retrieve and visualize stock data and create a performance plot. Includes the integration of custom user-defined functions. Agents automatically save generated `.py` and `.png` files. All files are featured in the "Outputs" folder of this repo. 
 
-🔗 To enroll in the course or for further information, visit [deeplearning.ai](https://www.deeplearning.ai/short-courses/), [AI Agentic Design Patterns with AutoGen](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/)
+### 📊 Financial Analysis Report Generator
+A multi-agent group chat that creates a comprehensive stock performance report. Includes planning, data retrieval, interpretation, and collaborative writing agents. Includes user-in-the-loop feedback and a supporting script for external API calls (`fetch_nvidia_news.py`).
 
-💡 Welcome to the "AI Agentic Design Patterns with AutoGen" course! The course will equip you with the knowledge and skills to build and customize multi-agent systems using AutoGen.
-In this course, you'll explore key principles of designing multi-agent systems and enabling agents to collaborate on complex tasks using the AutoGen framework. Here's what you can expect to learn and experience:
+### 🧾 Customer Onboarding
+A sequential multi-agent pipeline simulating customer onboarding using `ConversableAgent` and `initiate_chats`. A sequence of chats between agents to provide a guided customer onboarding experience for a product, using the multi-agent collaboration pattern.
 
----
+### 📝 Blog Post Creation with Reflection
+A high-quality blog post is generated by a `Writer` agent, then reviewed by nested agents inside a `Critic`. This design reflects on the content using SEO, ethics, and legal perspectives through recursive multi-agent feedback.
 
-# ElasticSearch RAG DEMO
+### ♟️ Conversational Chess
+A tool-using game where two agents play chess, using the `python-chess` library. Agents legally move pieces, call functions, and reason about the board state in turn-based fashion.
 
-## ⚙️ Project Overview          
-This repository demonstrates a lightweight Retrieval-Augmented Generation (RAG) pipeline applied to structured FAQ data. It uses [Elasticsearch](https://github.com/elastic/elasticsearch/tree/main) for keyword-based document retrieval, [Docker](https://www.docker.com/) to run Elasticsearch locally, and [OpenAI’s GPT-4o](https://openai.com/gpt-4o) as the LLM for final answer generation. Elasticsearch is a free and open source, distributed, RESTful search engine.
+## ⚙️ Getting Started
+**To run the multi-agent demos in this repository:**
 
-## ⚙️ Elasticsearch
-
-Elasticsearch is a distributed search and analytics engine, scalable data store, and vector database optimized for speed and relevance on production-scale workloads. Elasticsearch is the foundation of Elastic's open Stack platform. Search in near real-time over massive datasets, perform vector searches, and integrate with generative AI applications.
-
-> To access information on [machine learning innovations](https://www.elastic.co/search-labs) and [Lucene contributions from Elastic](https://www.elastic.co/search-labs), more information can be found in Elastic’s [Search Labs](https://www.elastic.co/search-labs) and [product page](https://www.elastic.co/products/elasticsearch).
-
-### Use cases
-- [Retrieval Augmented Generation (RAG)](https://www.elastic.co/blog/building-an-rag-system-using-elasticsearch-and-langchain)
-- [Vector search](https://www.elastic.co/blog/vector-database-elasticsearch)
-- Full-text search
-- Logs
-- Metrics
-- Application performance monitoring (APM)
-- Security logs
-
-
-## 🛠️ Technical Stack
-- **Knowledge Base**: `documents.json` containing course-related FAQ documents from the [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp/tree/main) course
-- **LLM**: OpenAI (GPT 4o)  
-- **Indexing, Retrieval, and Search**: Elasticsearch  
-- **Interface**: Jupyter Notebook  
-- **Containerization**: Docker (to run Elasticsearch locally)
-
-## ⚙️ Datasets
-* `documents.json`: Small-scale keyword-only dataset
-* `documents-llm.json`: Extended document set with LLM formatting in mind
-
->### FAQ Documents
-> * [**DE Zoomcamp**](https://docs.google.com/document/d/19bnYs80DwuUimHM65UV3sylsCn2j1vizrPOwzBwQrebw/edit)
-
-> * [**ML Zoomcamp**](https://docs.google.com/document/d/1LpPanc33QJJ6BSsyxVg-pWWNplal84TdZtQ1oaIhD8/edit)
-
-> * [**MLOps Zoomcamp**](https://docs.google.com/document/d/12TlBfhIiktyBv8RnsoJR6F72bkPDGEvPOltJIxaEzE0/edit)
-
-
-## ⚙️ Notebooks
-* `elasticsearch-rag.ipynb`: RAG pipeline
-* `parse-faq.ipynb`: Script to convert JSON-formatted FAQ content into usable input format
-* `envconfig`: Testing OpenAI API in sample notebook
-
-## ⚙️ Dependencies
-Dependencies are listed in `requirements.txt`. Key packages:
-
-* `elasticsearch`: for indexing and retrieving documents using Elasticsearch engine  
-* `docker`: to run Elasticsearch as a local containerized service  
-* `pandas`: for handling and structuring JSON data  
-* `scikit-learn`: for evaluation utilities and potential preprocessing  
-* `ipywidgets`: for interactive controls in Jupyter notebooks  
-* `tqdm`: for progress tracking  
-* `notebook`: Jupyter Notebook interface
-  
-#### **Installation**
-
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/Multi-Agent-Workflows-with-AutoGen.git
+cd Multi-Agent-Workflows-with-AutoGen
+``` 
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
-or 
-
+**or**
 ```bash
-pip install notebook==7.1.2 autogen autogen-agentchat>=0.4 autogen-ext[openai]>=0.4 chess==1.10.0 matplotlib numpy pandas yfinance
-``` 
+pip install notebook==7.1.2 autogen autogen-agentchat>=0.4 autogen-ext[openai]>=0.4 chess==1.10.0 matplotlib numpy pandas yfinance openai ipywidgets
+```
+### 3. Set Your OpenAI API Key
+**To use GPT-4o or any OpenAI LLM, export your API key as an environment variable:**
+```bash
+export OPENAI_API_KEY=your_openai_key_here
+```
+**or set it within your notebook using:**
 
+```python
+import os
+from dotenv import load_dotenv, find_dotenv
 
-#### 
----
-> ## 📌 Credits
-> 📦  This project uses[Elasticsearch](https://github.com/elastic/elasticsearch/tree/main), developed and maintained by [Elastic](https://github.com/elastic). Knowledge base and code adapted from the [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp/tree/main) by DataTalks.Club. 
+# these expect to find a .env file at the directory above the lesson.                                                                                                                     # the format for that file is (without the comment)                                                                                                                                       #API_KEYNAME=AStringThatIsTheLongAPIKeyFromSomeService                                                                                                                                     
+def load_env():
+    _ = load_dotenv(find_dotenv())
+
+def get_openai_api_key():
+    load_env()
+    openai_api_key = os.getenv("OPENAI_API_KEY")
+    return openai_api_key
+```
+### 4. Launch Jupyter Notebook
+**Start the notebook environment to explore the agent workflows:**
+```bash
+jupyter notebook
+```
+**Then open any notebook from the list in the ⚙️ Notebooks section.**
+
+## 🛠️ Technical Stack
+
+- **LLM Provider**: OpenAI (GPT-4o via `openai` and `autogen-ext[openai]`)
+- **Multi-Agent Framework**: [AutoGen](https://github.com/microsoft/autogen)  
+  - `autogen`, `autogen-agentchat`, `autogen-ext[openai]`
+- **Interface & Execution**: Jupyter Notebook (`notebook`, `ipywidgets`)
+- **Data Handling & Analysis**: `pandas`, `numpy`, `yfinance`
+- **Visualization**: `matplotlib`
+- **Domain-Specific Tooling**: `python-chess` (used in agentic chess simulation)
+
+## ⚙️ Dependencies
+
+Dependencies are listed in `requirements.txt`. Key packages:
+
+* `autogen`: for building and managing multi-agent workflows
+* `autogen-agentchat`: high-level API for structured conversational patterns
+* `autogen-ext[openai]`: integration with OpenAI’s GPT models (GPT-4o)
+* `openai`: direct API access to OpenAI’s LLMs
+* `notebook`: Jupyter Notebook environment for executing workflows
+* `ipywidgets`: interactive widgets for Jupyter interfaces
+* `pandas`: for tabular data handling and stock analysis
+* `numpy`: for array computations and numeric processing
+* `yfinance`: to fetch historical stock market data
+* `matplotlib`: to visualize stock price trends
+* `chess`: to simulate board states in the agentic chess demo
+
+## ⚙️ Notebooks
+
+* `Agent-vs-Agent-Chess-Simulation.ipynb`: Simulates a turn-based chess game between two autonomous agents using tool calling and the `python-chess` library.  
+* `Agentic-Coding-FinancialAnalysis.ipynb`: Agents generate and execute Python code to retrieve and visualize YTD stock performance for financial analysis.  
+* `Agentic-Financial-Analysis-ReportGenerator.ipynb`: Multi-agent report generation pipeline using external news data and human-in-the-loop feedback.  
+* `Multi-AgentConversation-Startup-Pitch-Demo.ipynb`: Simulates a realistic startup pitch dialogue between a founder and investor using structured agent conversation.  
+* `NestedChat-Blogpost-Creation-w-Reflection.ipynb`: Demonstrates nested chat orchestration for collaborative blog writing and multi-perspective content review.  
+* `SequentialChats-customeronboarding.ipynb`: Models a staged customer onboarding process using sequential agent tasks and conversational flows.  
 
 ## ⚙️ License
 This project is released under MIT license. 
+
+---
+> ## 📌 Credits
+> 📦  This project builds on concepts and starter code introduced in the [AI Agentic Design Patterns with AutoGen](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/) course by Chi Wang and Qingyun Wu, offered through [DeepLearning.AI](https://www.deeplearning.ai/short-courses/).  
+> While the original instructional materials provided foundational examples, this implementation has been heavily customized and extended.
+
 
 
 
